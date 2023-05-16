@@ -23,19 +23,7 @@ def main():
 
     # Display language-specific content
     if selected_language == 'English':
-        st.write("Hello! Welcome to the Droughtmap data download app.")
-            # Year range
-        start_year = 2011
-        end_year = 2022
-
-        # Year selection
-        selected_year = st.slider("Select Year", start_year, end_year)
-
-        # Display the selected year
-        st.write("Selected Year:", selected_year)
-
-
-        # --- UI ---         
+               # --- UI ---         
         # 2. horizontal menu w/o custom style
         selected = option_menu(
             menu_title=None,  # required
@@ -46,6 +34,14 @@ def main():
             orientation="horizontal",
         )
     
+        st.write("Hello! Welcome to the Droughtmap data download app.")
+        # Year range
+        start_year = 2011
+        end_year = 2022
+        # Year selection
+        selected_year = st.slider("Select Year", start_year, end_year)
+        # Display the selected year
+        st.write("Selected Year:", selected_year)
     
     ############################################################################################################################################################################################################################################################################################################################################################
 
