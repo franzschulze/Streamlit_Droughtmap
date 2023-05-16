@@ -33,15 +33,7 @@ def main():
             default_index=0,  # optional
             orientation="horizontal",
         )
-    
-        st.write("Hello! Welcome to the Droughtmap data download app.")
-        # Year range
-        start_year = 2011
-        end_year = 2022
-        # Year selection
-        selected_year = st.slider("Select Year", start_year, end_year)
-        # Display the selected year
-        st.write("Selected Year:", selected_year)
+   
     
     ############################################################################################################################################################################################################################################################################################################################################################
 
@@ -60,6 +52,14 @@ def main():
 ############################################################################################################################################################################################################################################################################################################################################################
         if selected == "Bulletin":
             st.title(selected + " Download")
+            st.write("Hello! Welcome to the Droughtmap data download app.")
+            # Year range
+            start_year = 2011
+            end_year = 2022
+            # Year selection
+            selected_year = st.slider("Select Year", start_year, end_year)
+            # Display the selected year
+            st.write("Selected Year:", selected_year)
             countries = set(["Select a Country"]+all_admi["country_id"].tolist())
             countries.remove("Select a Country")
             countries = ["Select a Country"] + sorted(countries)
@@ -86,6 +86,14 @@ def main():
         ##############################################################################################################################################################################
         if selected == "Data":
             st.title(selected + " Download")
+            st.write("Hello! Welcome to the Droughtmap data download app.")
+            # Year range
+            start_year = 2011
+            end_year = 2022
+            # Year selection
+            selected_year = st.slider("Select Year", start_year, end_year)
+            # Display the selected year
+            st.write("Selected Year:", selected_year)
             countries = set(["Select a Country"]+all_admi["country_id"].tolist())
             countries.remove("Select a Country")
             countries = ["Select a Country"] + sorted(countries)
