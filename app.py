@@ -118,20 +118,6 @@ def main():
 
     # Add English-specific content or functionality
     elif selected_language == 'Russian':
-        st.write("Здравствуйте! Добро пожаловать в приложение для загрузки данных карты засухи.")
-
-
-        # Year range
-        start_year = 2011
-        end_year = 2022
-
-        # Year selection
-        selected_year = st.slider("Выберите год", start_year, end_year)
-
-        # Display the selected year
-        st.write("Выбранный год:", selected_year)
-
-
         # --- UI ---         
         # 2. horizontal menu w/o custom style
         selected = option_menu(
@@ -160,6 +146,15 @@ def main():
 ############################################################################################################################################################################################################################################################################################################################################################
         if selected == "Бюллетень":
             st.title(selected + " Скачать")
+            st.write("Здравствуйте! Добро пожаловать в приложение для загрузки данных карты засухи.")
+            # Year range
+            start_year = 2011
+            end_year = 2022
+            # Year selection
+            selected_year = st.slider("Выберите год", start_year, end_year)
+            # Display the selected year
+            st.write("Выбранный год:", selected_year)
+            
             countries = set(["Выберите страну"]+all_admi["country_id"].tolist())
             countries.remove("Выберите страну")
             countries = ["Выберите страну"] + sorted(countries)
@@ -186,6 +181,15 @@ def main():
         ##############################################################################################################################################################################
         if selected == "Данные":
             st.title(selected + " Скачать")
+            st.write("Здравствуйте! Добро пожаловать в приложение для загрузки данных карты засухи.")
+            # Year range
+            start_year = 2011
+            end_year = 2022
+            # Year selection
+            selected_year = st.slider("Выберите год", start_year, end_year)
+            # Display the selected year
+            st.write("Выбранный год:", selected_year)
+            
             countries = set(["Выберите страну"]+all_admi["country_id"].tolist())
             countries.remove("Выберите страну")
             countries = ["Выберите страну"] + sorted(countries)
